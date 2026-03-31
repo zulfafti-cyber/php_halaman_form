@@ -96,13 +96,9 @@ if (isset($_POST['submit'])) {
         background: #2f7be5;
     }
 
-    .result {
-        margin-top: 30px;
-    }
-
     .result p {
-        font-size: 16px;
-        margin: 8px 0;
+        font-size: 15px;
+        margin: 5px 0;
     }
 </style>
 
@@ -124,16 +120,21 @@ if (isset($_POST['submit'])) {
 </div>
 
 <?php if ($user): ?>
-<div class="container result">
-    <h3>Hasil Input:</h3>
+<div class="container" style="margin-top: 25px;">
 
-    <p><strong>Hi, my name is:</strong> 
-        <?= $user->getFirstname(); ?> <?= $user->getLastname(); ?>
+    <h3>Your Data</h3>
+
+    <p><strong>Hi, my name is</strong> 
+        <strong><?= $user->getFirstname(); ?> <?= $user->getLastname(); ?></strong>
     </p>
 
-    <p><strong>Phone Number:</strong> <?= $user->getPhone(); ?></p>
+    <p><strong>Phone Number :</strong> <?= $user->getPhone(); ?></p>
 
-    <p><strong>Address:</strong> <?= $user->getAddress(); ?></p>
+    <p><strong>Address :</strong> <?= $user->getAddress(); ?></p>
+
+    <br>
+    <a href="" style="font-size:14px; color:#333;">Reset</a>
+
 </div>
 <?php endif; ?>
 
