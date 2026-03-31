@@ -1,7 +1,5 @@
 <?php
-// ======================
-// CLASS USER
-// ======================
+
 class User {
     private $firstname;
     private $lastname;
@@ -22,9 +20,6 @@ class User {
     public function getAddress()   { return $this->address; }
 }
 
-// ======================
-// PROSES INPUT (JIKA SUBMIT)
-// ======================
 $user = null;
 
 if (isset($_POST['submit'])) {
@@ -33,7 +28,6 @@ if (isset($_POST['submit'])) {
     $phone     = $_POST['phone'];
     $address   = $_POST['address'];
 
-    // Buat object user
     $user = new User($firstname, $lastname, $phone, $address);
 }
 ?>
